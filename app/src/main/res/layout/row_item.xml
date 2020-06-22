@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <TextView
+        android:id="@+id/rest_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Category"
+        app:layout_constraintStart_toStartOf="@+id/rest_name"
+        app:layout_constraintTop_toBottomOf="@+id/rest_address" />
+
+    <TextView
+        android:id="@+id/rest_name"
+        android:layout_width="287dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/rest_image"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Restaurant Name" />
+
+    <ImageView
+        android:id="@+id/rest_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="83dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="5dp"
+        android:numStars="5"
+        android:rating="3.5"
+        android:stepSize="0.5"
+        app:layout_constraintStart_toStartOf="@+id/rest_name"
+        app:layout_constraintTop_toBottomOf="@+id/rest_name" />
+
+    <TextView
+        android:id="@+id/num_reviews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="3dp"
+        android:text="0 Reviews"
+        app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
+        app:layout_constraintStart_toEndOf="@+id/ratingBar"
+        app:layout_constraintTop_toBottomOf="@+id/rest_name" />
+
+    <TextView
+        android:id="@+id/rest_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginEnd="16dp"
+        android:text="0.0 mi"
+        app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/rest_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Address"
+        app:layout_constraintStart_toStartOf="@+id/rest_name"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+    <TextView
+        android:id="@+id/rest_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="$$"
+        app:layout_constraintStart_toStartOf="@+id/rest_distance"
+        app:layout_constraintTop_toBottomOf="@+id/rest_distance" />
+</androidx.constraintlayout.widget.ConstraintLayout>
